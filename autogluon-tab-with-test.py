@@ -94,7 +94,7 @@ def parse_args():
   parser.add_argument('--current-host', type=str, default=os.environ['SM_CURRENT_HOST'])
   parser.add_argument('--hosts', type=list, default=json.loads(os.environ['SM_HOSTS']))
   
-  parser.add_argument('--target', type=str, default='label')
+  parser.add_argument('--target', type=str, default='target')
   parser.add_argument('--s3-output', type=str, default='s3://autogluon-test/results')
   parser.add_argument('--training-job-name', type=str, default=json.loads(os.environ['SM_TRAINING_ENV'])['job_name'])
 
